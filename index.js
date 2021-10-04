@@ -13,6 +13,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.urlencoded());
 
+app.get("/", function (req, res){
+    
+    res.render("index", {pokermonList: pokedex});
+});
+
 app.get("/home", function (req, res){
     
     res.render("index", {pokermonList: pokedex});
