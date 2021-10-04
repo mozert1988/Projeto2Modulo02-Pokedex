@@ -1,0 +1,27 @@
+{
+  "name": "projeto2modulo02-pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozert1988/Projeto2Modulo02-Pokedex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozert1988/Projeto2Modulo02-Pokedex/issues"
+  },
+  "homepage": "https://github.com/mozert1988/Projeto2Modulo02-Pokedex#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
