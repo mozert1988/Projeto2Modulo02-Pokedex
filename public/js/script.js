@@ -5,6 +5,6 @@ closeMessage.addEventListener("click", function (){
     message.style.display = "none"
 })
 
-setTimeout(() => {
-    message.style.display = "none"
+var mensagem = setTimeout(function() {
+    alert ("Cadastro feito com sucesso!");
 }, 5000)

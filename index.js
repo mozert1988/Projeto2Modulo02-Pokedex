@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const port =  process.env.PORT ||3000;
 var pokedex = [];
+var mensagem = "";
 
 SetPokermons();
 
@@ -14,6 +15,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
 app.get("/", function (req, res){
+
+    setTimeout(() => {
+        mensagem = "";
+    }, 5000);
     
     res.render("index", {pokermonList: pokedex});
 });
@@ -49,6 +54,9 @@ app.post("/new", function (req, res){
     pokemon.habilidade = habilidade;
 
     pokedex.push(pokemon);
+
+    mensagem = "Pokemon cadastrado com sucesso.";
+    res.redirect("/");   
 
     res.render("index", {pokermonList: pokedex});
 });
